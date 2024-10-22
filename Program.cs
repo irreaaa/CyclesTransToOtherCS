@@ -27,9 +27,10 @@ while (x1 < count)
 {
     int proverka = perem % 10;
     perem = perem / 10;
-    if (proverka > q1)
+    if (proverka >= q1)
     {
-        Console.WriteLine($"Число {x1} должно быть в системе исчисления {q1}");
+        Console.WriteLine($"Число должно быть в системе счисления {q1}");
+        return;
     }
     x1++;
 }
@@ -48,7 +49,6 @@ while (perem1 <= length)
     delitel = delitel * 10;
     perem1++;
 }
-Console.WriteLine(result);
 
 int perem2 = Convert.ToInt32(result);
 string result1 = "";
